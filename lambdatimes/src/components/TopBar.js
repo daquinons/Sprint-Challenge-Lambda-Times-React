@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import withAuthentication from "../authentication/withAuthentication";
 
 // Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
@@ -81,6 +82,8 @@ const StyledContainerRight = styled.div`
   }
 `;
 
+const ContainerRightWithAuthentication = withAuthentication(StyledContainerRight);
+
 const TopBar = () => {
   return (
     <StyledTopBar>
@@ -96,9 +99,7 @@ const TopBar = () => {
           <span>MUSIC</span>
           <span>ANNOUNCEMENTS</span>
         </StyledContainerCenter>
-        <StyledContainerRight>
-          <span>LOG IN</span>
-        </StyledContainerRight>
+        <ContainerRightWithAuthentication />
       </StyledContainer>
     </StyledTopBar>
   );
