@@ -29,9 +29,18 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+It's a library used to enforce that some props pased to a React component are a given type. It's useful to avoid errors passing unexpected props, or not passing them at all.
+
 - [ ] Describe a life-cycle event in React?
+Initialization -> ComponentWillMount -> Render -> ComponentDidMount
+
 - [ ] Explain the details of a Higher Order Component?
+A HOC is a function that injects new behaviour to a given Component. This Component is passed as a parameter to the HOC and is returned with some new beheavior. It's useful to not repeat something in multiple Components, you can inject it using a HOC.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+Importing a file, being a CSS file, a LESS file, or any other format.
+Passing an object with styles as props to the Component, common method in React Native.
+Using styled-components, a library that allows to have styled components with the power of preprocessors like LESS.
 
 ## Project Setup
 
